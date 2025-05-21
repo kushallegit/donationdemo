@@ -10,12 +10,12 @@
 
 /* Base */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Outfit', sans-serif;
   background: #fdfdfd;
   color: var(--text-dark);
   line-height: 1.6;
 }
+
 
 
 body {
@@ -55,19 +55,22 @@ section {
 
 /* Buttons */
 .btn, .donate-btn {
-  background-color: #6b9b5d;
+  background: linear-gradient(145deg, var(--green), var(--green-dark));
+  border: none;
   color: white;
-  padding: 0.75rem 1.4rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
   border-radius: 12px;
   font-weight: 600;
-  transition: background 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.btn:hover, .donate-btn:hover {
+  background: linear-gradient(145deg, #5b824a, #476d3a);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.btn:hover, .donate-btn:hover {
-  background-color: #5b824a;
-  transform: translateY(-2px);
-}
 
 
 /* Hero Section */
@@ -98,7 +101,7 @@ section {
   padding: 3rem 3.5rem;
   border-radius: 16px;
   max-width: 520px;
-  color: #2e2e2e;
+  color: white;
   box-shadow: 0 6px 24px rgba(0, 0, 0, 0.1);
 }
 
@@ -107,13 +110,13 @@ section {
   font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 700;
-  color: #2e2e2e;
+  color: white;
   margin-bottom: 1rem;
 }
 
 .hero p {
   font-size: 1.1rem;
-  color: #3e3e3e;
+  color: white;
   line-height: 1.6;
   margin-bottom: 2rem;
 }
@@ -151,14 +154,15 @@ section {
 .causes h2 {
   font-size: 2.5rem;
   margin-bottom: 3rem;
-  color: var(--green);
+  color: var(--black);
+
 }
 
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  max-width: 1200px;
+  gap: 1rem;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -286,3 +290,23 @@ section {
     height: 180px;
   }
 }
+
+.cause-card, .donation-card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+.cause-card:hover, .donation-card:hover {
+  transform: scale(1.02);
+}
+
+section:not(:last-child)::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--green);
+  margin: 3rem auto 0;
+  border-radius: 2px;
+}
+
+

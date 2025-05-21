@@ -310,3 +310,91 @@ section:not(:last-child)::after {
 }
 
 
+/* Get to Know Us Section */
+.get-to-know {
+  background: #f3f3ed;
+  padding: 5rem 2rem;
+}
+
+.get-to-know .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.logo-side {
+  flex: 1;
+  text-align: center;
+}
+
+.uzima-logo {
+  width: 220px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.info-side {
+  flex: 2;
+  color: #333;
+  max-width: 1300px;
+}
+
+.info-side h2 {
+  font-size: 2.2rem;
+  
+  margin-bottom: 1rem;
+  color: var(--green-dark);
+  font-family: 'Outfit', sans-serif;
+}
+
+.info-side p {
+  font-size: 1.05rem;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.info-side .vision {
+  font-style: italic;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .get-to-know .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .info-side h2 {
+    font-size: 1.8rem;
+  }
+
+  .info-side p {
+    font-size: 1rem;
+  }
+}
+
+.center-heading {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 2rem;
+  color: var(--green-dark);
+  font-family: 'Outfit', sans-serif;
+}
+
+.text-block {
+  padding-left: 10rem;
+  padding-right: 1rem;
+}
+
+@media (max-width: 768px) {
+  .text-block {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
